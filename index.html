@@ -14,11 +14,15 @@ text-align: center;
   padding: 0;
 }
 h1 {
-margin-bottom: 20px;
-background: white;         /* белый фон */
-display: inline-block;     /* чтобы фон был только под текстом */
-padding: 10px 20px;        /* отступы вокруг текста */
-border-radius: 8px; 
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: block;       /* занимает всю ширину */
+  width: fit-content;   /* ширина под текст */
+  margin-left: auto;    /* центрируем */
+  margin-right: auto;   /* центрируем */
+  text-align: center;   /* текст по центру */
 }
 img {
 max-width: 300px;
