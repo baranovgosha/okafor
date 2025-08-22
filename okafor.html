@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Счётчик Окафора</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+margin-bottom: 20px;
+}
+img {
+max-width: 300px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+.counter {
+font-size: 1.2em;
+margin: 10px 0;
+}
+button {
+margin: 5px;
+padding: 10px 20px;
+font-size: 1em;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+background: #0077cc;
+color: white;
+transition: 0.3s;
+}
+button:hover {
+background: #005fa3;
+}
+</style>
+</head>
+<body>
+<h1>Счётчик Окафора</h1>
+
+
+<!-- Фото футболиста -->
+<img src="img/noa.jpg" alt="Ноа Окафор">
+
+
+<!-- Счётчики -->
+<div class="counter">Голы: <span id="goals">1</span></div>
+<div class="counter">Ассисты: <span id="assists">0</span></div>
+<div class="counter"><strong>Всего действий: <span id="total">0</span></strong></div>
+
+
+<script>
+let goals = 0;
+let assists = 0;
+
+
+function updateTotal() {
+document.getElementById("total").textContent = goals + assists;
+}
+
+
+function addGoal() {
+goals++;
+document.getElementById("goals").textContent = goals;
+updateTotal();
+}
+</html>
